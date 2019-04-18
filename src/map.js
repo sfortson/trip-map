@@ -74,6 +74,7 @@ export default class Map extends Component<{}, State> {
         width={'100%'}
         {...this.state.viewport}
         onViewportChange={(viewport: ViewportState) => this.setState({ viewport })}
+        mapOptions={{ style: 'mapbox://styles/mapbox/outdoors-v10' }}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_TOKEN}
       >
         {this.renderMarkers()}
