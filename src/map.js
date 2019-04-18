@@ -74,9 +74,7 @@ export default class Map extends Component<{}, State> {
         width={'100%'}
         {...this.state.viewport}
         onViewportChange={(viewport: ViewportState) => this.setState({ viewport })}
-        mapboxApiAccessToken={
-          'pk.eyJ1Ijoic2ZvcnRzb24iLCJhIjoiY2pvZzJwMnp6MGFyczN2cGphbjBrNGV3NCJ9.X6EVSy5ipogfXTf9DxxjmQ'
-        }
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_TOKEN}
       >
         {this.renderMarkers()}
       </ReactMapGL>
