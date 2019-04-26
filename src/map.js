@@ -1,9 +1,20 @@
 // @flow
 
 import React, { Component } from 'react';
-import ReactMapGL, { Marker } from 'react-map-gl';
+import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
 
 import MapPin from './static/images/map_pin.png';
+
+const navStyle = {
+  position: 'absolute',
+  top: 36,
+  left: 0,
+  padding: '10px'
+};
+
+type Props = {
+  onClick: () => mixed
+};
 
 type ViewportState = {
   height: string,
@@ -15,9 +26,9 @@ type ViewportState = {
 
 type State = { viewport: ViewportState };
 
-export default class Map extends Component<{}, State> {
-  constructor() {
-    super();
+export default class Map extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
     this.state = {
       viewport: {
         height: '100%',
@@ -39,11 +50,18 @@ export default class Map extends Component<{}, State> {
         <div>
           <Marker latitude={53.428594} longitude={-9.319193} offsetLeft={leftOffset} offsetTop={topOffset}>
             <div style={{ fontSize: '12px' }}>Day 1</div>
-            <img src={MapPin} style={{ height: pinHeight }} alt={'Map Pin'} />
+            <img src={MapPin} style={{ height: pinHeight }} alt={'Map Pin'} onClick={this.props.onClick} />
           </Marker>
           <Marker latitude={53.455881} longitude={-9.540736} offsetLeft={leftOffset} offsetTop={topOffset}>
             <div style={{ fontSize: '12px' }}>Day 2</div>
-            <img src={MapPin} style={{ height: pinHeight }} alt={'Map Pin'} />
+            <img
+              src={MapPin}
+              style={{ height: pinHeight }}
+              alt={'Map Pin'}
+              onClick={() => {
+                console.log('hi');
+              }}
+            />
           </Marker>
           <Marker latitude={53.520828} longitude={-9.74239} offsetLeft={leftOffset} offsetTop={topOffset}>
             <div style={{ fontSize: '12px' }}>Day 3</div>
@@ -69,16 +87,22 @@ export default class Map extends Component<{}, State> {
 
   render() {
     return (
-      <ReactMapGL
-        height={'100%'}
-        width={'100%'}
-        {...this.state.viewport}
-        onViewportChange={(viewport: ViewportState) => this.setState({ viewport })}
-        mapOptions={{ style: 'mapbox://styles/mapbox/outdoors-v10' }}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_TOKEN}
-      >
-        {this.renderMarkers()}
-      </ReactMapGL>
+      <div style={{ height: '100%', width: '100%', textAlign: 'left' }}>
+        <ReactMapGL
+          height={'100%'}
+          width={'100%'}
+          {...this.state.viewport}
+          onViewportChange={(viewport: ViewportState) => this.setState({ viewport })}
+          mapOptions={{ style: 'mapbox://styles/mapbox/outdoors-v10' }}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_TOKEN}
+          responsive
+        >
+          {this.renderMarkers()}
+          <div className="nav" style={navStyle}>
+            <NavigationControl onViewportChange={(viewport: ViewportState) => this.setState({ viewport })} />
+          </div>
+        </ReactMapGL>
+      </div>
     );
   }
 }
