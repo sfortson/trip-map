@@ -12,11 +12,12 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 import Map from './map';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const styles = theme => ({
   root: {
@@ -117,6 +118,9 @@ class PersistentDrawerLeft extends Component<{}, State> {
               <IconButton onClick={this.handleDrawerClose}>
                 {theme.direction === 'ltr' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
               </IconButton>
+              <Typography variant="h5" gutterBottom>
+                Itinerary
+              </Typography>
             </div>
             <Divider />
             <List>
