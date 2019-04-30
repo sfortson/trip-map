@@ -5,19 +5,18 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import marked from 'marked';
 
 import Map from './map';
+import Day1 from './itinerary/day1.md';
 
-const drawerWidth = 300;
+const drawerWidth = 400;
 
 const styles = theme => ({
   root: {
@@ -77,15 +76,28 @@ const styles = theme => ({
 });
 
 type State = {
-  open: boolean
+  open: boolean,
+  Day1_markdown: Object
 };
 
 class PersistentDrawerLeft extends Component<{}, State> {
   constructor() {
     super();
     this.state = {
-      open: false
+      open: false,
+      Day1_markdown: null
     };
+  }
+
+  componentDidMount() {
+    fetch(Day1)
+      .then(response => {
+        return response.text();
+      })
+      .then(text => {
+        var rawMarkup = marked(text, { sanitize: true });
+        this.setState({ Day1_markdown: { __html: rawMarkup } });
+      });
   }
 
   handleDrawerOpen = () => {
@@ -123,13 +135,9 @@ class PersistentDrawerLeft extends Component<{}, State> {
               </Typography>
             </div>
             <Divider />
-            <List>
-              {['Itinerary'].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemText primary={text} />
-                </ListItem>
-              ))}
-            </List>
+            <div style={{ paddingLeft: '8px' }}>
+              {this.state.Day1_markdown ? <div dangerouslySetInnerHTML={this.state.Day1_markdown} /> : <div />}
+            </div>
           </Drawer>
           <Map onClick={this.handleDrawerOpen} />
         </Grid>
