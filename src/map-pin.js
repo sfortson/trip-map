@@ -13,7 +13,7 @@ type Props = {
   pinHeight: string,
   markdownPath: string,
   name: string,
-  onClick: (filePath: string) => mixed
+  onClick: (filePath: string, drawerTitle: string) => mixed
 };
 
 class MapPin extends Component<Props> {
@@ -23,7 +23,7 @@ class MapPin extends Component<Props> {
     return (
       <Marker latitude={latitude} longitude={longitude} offsetLeft={offsetLeft} offsetTop={offsetTop}>
         <div style={{ fontSize: '12px' }}>{name}</div>
-        <img src={PinImage} style={{ height: pinHeight }} alt={'Map Pin'} onClick={() => onClick(markdownPath)} />
+        <img src={PinImage} style={{ height: pinHeight }} alt={'Map Pin'} onClick={() => onClick(markdownPath, name)} />
       </Marker>
     );
   }

@@ -10,8 +10,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Typography from '@material-ui/core/Typography';
 
-const drawerWidth = 400;
-
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -24,8 +22,6 @@ const styles = theme => ({
     })
   },
   appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen
@@ -39,11 +35,11 @@ const styles = theme => ({
     display: 'none'
   },
   drawer: {
-    width: drawerWidth,
+    width: '33%',
     flexShrink: 0
   },
   drawerPaper: {
-    width: drawerWidth
+    width: '33%'
   },
   drawerHeader: {
     display: 'flex',
@@ -58,7 +54,7 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     }),
-    marginLeft: -drawerWidth
+    marginLeft: '33%'
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
@@ -72,6 +68,7 @@ const styles = theme => ({
 type Props = {
   classes: Object,
   open: boolean,
+  title: string,
   theme: Object,
   dayInfo: Object,
   handleDrawerClose: () => mixed
@@ -96,12 +93,12 @@ class PersistentDrawerRight extends Component<Props> {
           <IconButton onClick={this.props.handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
-          <Typography variant="h5" gutterBottom>
-            Itinerary
+          <Typography style={{ textAlign: 'center', paddingTop: '8px' }} variant="h4" gutterBottom>
+            {this.props.title}
           </Typography>
         </div>
         <Divider />
-        <div style={{ paddingLeft: '8px' }}>
+        <div style={{ paddingLeft: '8px', paddingRight: '4px' }}>
           {this.props.dayInfo ? <div dangerouslySetInnerHTML={this.props.dayInfo} /> : <div />}
         </div>
       </Drawer>

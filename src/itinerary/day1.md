@@ -1,44 +1,9 @@
-# Day 1
+# Oughterard
 
-We are going to be in a town Day 1 and walk to a new town on day two.
+## Overview
+Oughterard (meaning 'upper height') is a small town on the banks of the Owenriff River in County Galway. It is beside Lough Corrib, the largest lake in the Republic of Ireland, and at the start of the Connermara Mountain Range. The Victorian writer William Makepeace Thackeray wrote of Oughterard: 'A more beautiful village can scarcely be seen'. Today it is still quite pretty and makes for a good gateway to Connemara. It also is one of Ireland's principal angling centres.
 
-Here's our logo (hover to see the title text):
+## References:
+[Wikipedia](https://en.wikipedia.org/wiki/Oughterard)
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-Three or more...
-
----
-
-Hyphens
-
-***
-
-Asterisks
-
-___
-
-Underscores
+[Welcome To Oughterard](http://www.oughterardtourism.com/index.htm)

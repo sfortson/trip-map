@@ -14,7 +14,7 @@ const navStyle = {
 };
 
 type Props = {
-  onClick: (filePath: string) => mixed
+  onClick: (filePath: string, drawerTitle: string) => mixed
 };
 
 type ViewportState = {

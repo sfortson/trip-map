@@ -27,7 +27,8 @@ type Props = {
 
 type State = {
   open: boolean,
-  markdown: Object
+  markdown: Object,
+  drawerTitle: string
 };
 
 class App extends Component<Props, State> {
@@ -35,13 +36,14 @@ class App extends Component<Props, State> {
     super();
     this.state = {
       open: false,
-      markdown: null
+      markdown: null,
+      drawerTitle: ''
     };
   }
 
-  handleDrawerOpen = (value: string) => {
-    this.setState({ open: true });
-    this.fetchMarkdown(value);
+  handleDrawerOpen = (filePath: string, drawerTitle: string) => {
+    this.setState({ open: true, drawerTitle: drawerTitle });
+    this.fetchMarkdown(filePath);
   };
 
   handleDrawerClose = () => {
@@ -70,6 +72,7 @@ class App extends Component<Props, State> {
             handleDrawerClose={this.handleDrawerClose}
             open={this.state.open}
             dayInfo={this.state.markdown}
+            title={this.state.drawerTitle}
           />
           <Map onClick={this.handleDrawerOpen} />
         </Grid>
