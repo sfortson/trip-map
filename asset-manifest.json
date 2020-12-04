@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bdbd7c0.chunk.css",
-    "main.js": "/static/js/main.da2572fc.chunk.js",
-    "main.js.map": "/static/js/main.da2572fc.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.02726f93.js",
-    "runtime-main.js.map": "/static/js/runtime-main.02726f93.js.map",
-    "static/css/2.48b1c4ec.chunk.css": "/static/css/2.48b1c4ec.chunk.css",
-    "static/js/2.c9d6ef9a.chunk.js": "/static/js/2.c9d6ef9a.chunk.js",
-    "static/js/2.c9d6ef9a.chunk.js.map": "/static/js/2.c9d6ef9a.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.48b1c4ec.chunk.css.map": "/static/css/2.48b1c4ec.chunk.css.map",
-    "static/css/main.8bdbd7c0.chunk.css.map": "/static/css/main.8bdbd7c0.chunk.css.map",
-    "static/js/2.c9d6ef9a.chunk.js.LICENSE.txt": "/static/js/2.c9d6ef9a.chunk.js.LICENSE.txt",
-    "static/media/day1.fd3598b1.md": "/static/media/day1.fd3598b1.md",
-    "static/media/day2.079b8538.md": "/static/media/day2.079b8538.md",
-    "static/media/map_pin.8504a2b3.png": "/static/media/map_pin.8504a2b3.png"
+    "main.css": "/trip-map/static/css/main.8bdbd7c0.chunk.css",
+    "main.js": "/trip-map/static/js/main.f88b701c.chunk.js",
+    "main.js.map": "/trip-map/static/js/main.f88b701c.chunk.js.map",
+    "runtime-main.js": "/trip-map/static/js/runtime-main.bb004185.js",
+    "runtime-main.js.map": "/trip-map/static/js/runtime-main.bb004185.js.map",
+    "static/css/2.48b1c4ec.chunk.css": "/trip-map/static/css/2.48b1c4ec.chunk.css",
+    "static/js/2.f104fbc3.chunk.js": "/trip-map/static/js/2.f104fbc3.chunk.js",
+    "static/js/2.f104fbc3.chunk.js.map": "/trip-map/static/js/2.f104fbc3.chunk.js.map",
+    "index.html": "/trip-map/index.html",
+    "static/css/2.48b1c4ec.chunk.css.map": "/trip-map/static/css/2.48b1c4ec.chunk.css.map",
+    "static/css/main.8bdbd7c0.chunk.css.map": "/trip-map/static/css/main.8bdbd7c0.chunk.css.map",
+    "static/js/2.f104fbc3.chunk.js.LICENSE.txt": "/trip-map/static/js/2.f104fbc3.chunk.js.LICENSE.txt",
+    "static/media/day1.fd3598b1.md": "/trip-map/static/media/day1.fd3598b1.md",
+    "static/media/day2.079b8538.md": "/trip-map/static/media/day2.079b8538.md",
+    "static/media/map_pin.8504a2b3.png": "/trip-map/static/media/map_pin.8504a2b3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.02726f93.js",
+    "static/js/runtime-main.bb004185.js",
     "static/css/2.48b1c4ec.chunk.css",
-    "static/js/2.c9d6ef9a.chunk.js",
+    "static/js/2.f104fbc3.chunk.js",
     "static/css/main.8bdbd7c0.chunk.css",
-    "static/js/main.da2572fc.chunk.js"
+    "static/js/main.f88b701c.chunk.js"
   ]
 }
