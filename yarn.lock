@@ -5349,17 +5349,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001125, caniuse-lite@npm:^1.0.30001164":
-  version: 1.0.30001165
-  resolution: "caniuse-lite@npm:1.0.30001165"
-  checksum: 7fe37ac8e2e1f0c4ceb7c0e5eaa07104771eedf2474ec23e7e1136c28415e11589db1fbc55e7478e7eca7fdd5a476c13a3a108cf989090d9f6d0c0561eac38c3
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001181":
-  version: 1.0.30001199
-  resolution: "caniuse-lite@npm:1.0.30001199"
-  checksum: 7df61b4612add0a18e9462fd81fb7aeead1e3d13db4d8981c3878256b04af323f4a0715edccc82f3c92536596d076088437e43a3476f8e2c85a9d0f6928e55d0
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001125, caniuse-lite@npm:^1.0.30001164, caniuse-lite@npm:^1.0.30001181":
+  version: 1.0.30001252
+  resolution: "caniuse-lite@npm:1.0.30001252"
+  checksum: 0d25a2795ca224c1a689b08fe37a5dc6c4c79d80720f927bf7df70ed30c1b1b62c3cc51429eac01902d3fc298d9531b85efec331c2a051e42615c76fa348f118
   languageName: node
   linkType: hard
 
@@ -13538,12 +13531,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:^1.16.2":
-  version: 1.19.1
-  resolution: "prettier@npm:1.19.1"
+"prettier@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "prettier@npm:2.3.2"
   bin:
-    prettier: ./bin-prettier.js
-  checksum: bc78219e0f8173a808f4c6c8e0a137dd8ebd4fbe013e63fe1a37a82b48612f17b8ae8e18a992adf802ee2cf7428f14f084e7c2846ca5759cf4013c6e54810e1f
+    prettier: bin-prettier.js
+  checksum: 17ce5784ac67621c292df58e2da60b2ee150c2d6aebea22a6ad9e52fcd6a5e66c349d0a8436ea3bd8ff9d778920a5f68000d7625b74f43558718a49755aa5259
   languageName: node
   linkType: hard
 
@@ -16227,7 +16220,7 @@ resolve@^1.18.1:
     fsevents: ^2.3.2
     gh-pages: 3.2.3
     marked: 0.8.2
-    prettier: ^1.16.2
+    prettier: ^2.3.2
     react: 17.0.2
     react-dom: 17.0.2
     react-map-gl: 5.3.16
