@@ -9,26 +9,26 @@ import marked from 'marked';
 import Map from './map';
 import DrawerRight from './drawer';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: 'flex',
-    height: '100%'
-  }
+    height: '100%',
+  },
 });
 
 type Props = {
   classes: {
     root: {
       display: 'flex',
-      height: '100%'
-    }
-  }
+      height: '100%',
+    },
+  },
 };
 
 type State = {
   open: boolean,
   markdown: Object,
-  drawerTitle: string
+  drawerTitle: string,
 };
 
 class App extends Component<Props, State> {
@@ -37,7 +37,7 @@ class App extends Component<Props, State> {
     this.state = {
       open: false,
       markdown: null,
-      drawerTitle: ''
+      drawerTitle: '',
     };
   }
 
@@ -52,11 +52,11 @@ class App extends Component<Props, State> {
 
   fetchMarkdown = (filePath: string) => {
     fetch(filePath)
-      .then(response => {
+      .then((response) => {
         return response.text();
       })
-      .then(text => {
-        var rawMarkup = marked(text, { sanitize: true });
+      .then((text) => {
+        const rawMarkup = marked(text, { sanitize: true });
         this.setState({ markdown: { __html: rawMarkup } });
       });
   };

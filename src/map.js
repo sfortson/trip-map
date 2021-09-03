@@ -10,11 +10,11 @@ const navStyle = {
   position: 'absolute',
   top: 36,
   left: 0,
-  padding: '10px'
+  padding: '10px',
 };
 
 type Props = {
-  onClick: (filePath: string, drawerTitle: string) => mixed
+  onClick: (filePath: string, drawerTitle: string) => mixed,
 };
 
 type ViewportState = {
@@ -22,7 +22,7 @@ type ViewportState = {
   width: string,
   latitude: number,
   longitude: number,
-  zoom: number
+  zoom: number,
 };
 
 type State = { viewport: ViewportState };
@@ -36,8 +36,8 @@ export default class Map extends Component<Props, State> {
         width: '100%',
         latitude: 53.428594,
         longitude: -9.319193,
-        zoom: 8
-      }
+        zoom: 8,
+      },
     };
   }
 

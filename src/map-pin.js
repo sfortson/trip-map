@@ -13,7 +13,7 @@ type Props = {
   pinHeight: string,
   markdownPath: string,
   name: string,
-  onClick: (filePath: string, drawerTitle: string) => mixed
+  onClick: (filePath: string, drawerTitle: string) => mixed,
 };
 
 class MapPin extends Component<Props> {
